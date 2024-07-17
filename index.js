@@ -1,10 +1,10 @@
 const express = require("express");
 const app = express();
-
+process.env["NODE_ENV"] = "3001";
 app.use(express.json());
 
 const cors = require("cors");
-
+app.use(express.static("dist"));
 app.use(cors());
 
 let notes = [
